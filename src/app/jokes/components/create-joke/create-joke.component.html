@@ -1,0 +1,24 @@
+<form [formGroup]="form"
+      *ngLet="(categories$ | async)! as categories">
+   <p-dropdown [options]="categories"
+               optionLabel="name"
+               optionValue="id"
+               formControlName="category"
+               placeholder="Wybierz kategorię">
+   </p-dropdown>
+   <textarea pInputTextarea
+             formControlName="content"
+             placeholder="asdasd">
+   </textarea>
+   <div class="p-dialog-footer">
+      <button pButton
+              icon="pi pi-times"
+              label="Anuluj">
+      </button>
+      <button pButton
+              icon="pi pi-check"
+              label="Dodaj"
+              (click)="onSubmit()">
+      </button>
+   </div>
+</form>

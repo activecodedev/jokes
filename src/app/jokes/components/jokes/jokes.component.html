@@ -1,0 +1,20 @@
+<p-toast></p-toast>
+<button pButton
+        type="button"
+        label="Dodaj"
+        (click)="openDialog()">
+</button>
+<p-card *ngIf="selectedJoke$ | async as joke">
+   <ng-template pTemplate="header">
+      Header content here
+   </ng-template>
+   {{joke.content}}
+   <ng-template pTemplate="footer">
+      Footer content here
+   </ng-template>
+</p-card>
+<button pButton
+        type="button"
+        label="Pokaż następny"
+        (click)="nextJoke()">
+</button>

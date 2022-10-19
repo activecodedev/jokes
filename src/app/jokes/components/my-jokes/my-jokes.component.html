@@ -1,0 +1,22 @@
+<p-toast></p-toast>
+<button pButton
+        type="button"
+        label="Dodaj"
+        (click)="openCreateDialog()">
+</button>
+<ng-container *ngFor="let joke of (jokes$ | async)">
+   <p-card>
+      <ng-template pTemplate="header">
+         Header content here
+      </ng-template>
+      {{ joke.content }}
+      <ng-template pTemplate="footer">
+         <p-button (click)="openConfirmationDialog()"
+                   label="Usuń"></p-button>
+      </ng-template>
+   </p-card>
+</ng-container>
+<p-confirmDialog header="Potwierdzenie"></p-confirmDialog>
+<button (click)="openConfirmationDialog()"
+        pButton
+        label="Usuń"></button>

@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/theme/_variables.scss';
+@import './assets/theme/_common.scss';
+//@import url('./assets/theme/_forms.scss');
+@import './assets/theme/_header.scss';
+//@import url('./assets/theme/_messages.scss');
+
+html,
+body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+}
